@@ -13,8 +13,7 @@ const ProjectItem = (props) => {
       exit={{ scale: 0.1 }}
       layout
       className={classes.card}>
-      <Link href={`/projects/${project.slug}`}>
-        <a>
+      <Link legacyBehavior href={`/projects/${project.slug}`}>
           <div className={classes.cardContent}>
             <h4>{project.title}</h4>
             <small className='mb-10 d-block'>
@@ -38,7 +37,6 @@ const ProjectItem = (props) => {
               </div>
             )}
           </div>
-        </a>
       </Link>
 
       <p>{project.description}</p>
@@ -56,11 +54,9 @@ const ProjectItem = (props) => {
             Website
           </a>
         )}
-        <Link href={`/projects/${project.slug}`}>
-          <a>
+        <Link legacyBehavior href={`/projects/${project.slug}`}>
             <i className='fa fa-circle-info'></i>
             Details
-          </a>
         </Link>
       </div>
     </motion.div>

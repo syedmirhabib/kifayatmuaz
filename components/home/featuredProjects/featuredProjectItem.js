@@ -22,7 +22,6 @@ const FeaturedProjectItem = (props) => {
         <div className={classes.row}>
           <div className={classes.columnRight}>
             <Link href={`/projects/${project.slug}`}>
-              <a>
                 <div className={classes.card}>
                   <Image
                     src={`/portfolio/images/projects/${project.image}`}
@@ -31,7 +30,6 @@ const FeaturedProjectItem = (props) => {
                     alt={project.title}
                   />
                 </div>
-              </a>
             </Link>
           </div>
 
@@ -51,11 +49,9 @@ const FeaturedProjectItem = (props) => {
                   Website
                 </a>
               )}
-              <Link href={`/projects/${project.slug}`}>
-                <a>
+              <Link legacyBehavior href={`/projects/${project.slug}`}>
                   <i className='fa fa-circle-info'></i>
                   Project details
-                </a>
               </Link>
             </div>
           </div>

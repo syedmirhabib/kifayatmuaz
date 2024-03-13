@@ -28,8 +28,7 @@ const PostItem = (props) => {
         <p>{excerpt}</p>
       </div>
       <div className={classes.cardAction}>
-        <Link href={linkPath}>
-          <a>Read more</a>
+        <Link legacyBehavior href={linkPath}>Read more
         </Link>
       </div>
     </div>
